@@ -22,6 +22,10 @@ const handleInput = key => {
   else if (key === 's') conn.write('Move: down');
   else if (key === 'h') conn.write('Move: left');
   else if (key === 'n') conn.write('Move: right');
+  else if (key === 'u') conn.write('Say: o_hai!..');
+  else if (key === 'a') conn.write('Say: ima_snek');
+  else if (key === 'o') conn.write('Say: so_wow_much_snek');
+  else if (key === 'e') conn.write('Say: omnomnom');
 };
 
 export default setupInput;
