@@ -7,5 +7,4 @@ conn.on('connect', () => {
   console.log('\nSucessfully connected!');
   conn.write('Name: AX');
 });
-conn.on('data', data => console.log('\nserver:', data));
 setupInput();

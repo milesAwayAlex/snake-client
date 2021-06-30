@@ -8,6 +8,7 @@ const connect = () => {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
+  conn.on('data', data => console.log('\nserver:', data));
   return conn;
 };
 
