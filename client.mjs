@@ -9,8 +9,11 @@ const connect = () => {
   // interpret incoming data as text
   conn.setEncoding('utf8');
 
-  conn.on('connect', (err, data) => console.log('err:', err, 'data', data));
-  conn.on('data', (err, data) => console.log('err:', err, 'data', data));
+  conn.on('connect', (err, data) => {
+    console.log('err:', err, 'data:', data, '\nSucessfully connected!');
+    conn.write('Name: AX');
+  });
+  conn.on('data', data => console.log('data:', data));
 
   return conn;
 };
