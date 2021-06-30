@@ -1,10 +1,10 @@
 import {createConnection} from 'net';
 
 // establishes a connection with the game server
-const connect = () => {
+const connect = (host, port) => {
   const conn = createConnection({
-    host: 'localhost', // IP address here,
-    port: 50541, // PORT number here,
+    host: host || 'localhost', // IP address here,
+    port: +port || 50541, // PORT number here,
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
